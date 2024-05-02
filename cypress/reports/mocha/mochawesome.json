@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-02T20:16:45.076Z",
+    "end": "2024-05-02T20:16:53.146Z",
+    "duration": 8070,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "307416c6-5b21-44a6-8dc5-1f43ba273aee",
+      "title": "",
+      "fullFile": "cypress\\e2e\\POM\\homeSaucePage.cy.js",
+      "file": "cypress\\e2e\\POM\\homeSaucePage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "69b97ac0-4228-430f-ae76-e639c6e87a50",
+          "title": "POM implementation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login to inventory page",
+              "fullTitle": "POM implementation should login to inventory page",
+              "timedOut": null,
+              "duration": 2468,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homeSaucePage.default.typeUsername('standard_user');\n_homeSaucePage.default.typePassword('secret_sauce');\n_homeSaucePage.default.clickLogin();\n_inventoryPage.default.elements.titleSpan().should('have.text', 'Products');",
+              "err": {},
+              "uuid": "cdf66957-fa7b-4077-b549-736686c11d6d",
+              "parentUUID": "69b97ac0-4228-430f-ae76-e639c6e87a50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display locked out",
+              "fullTitle": "POM implementation should display locked out",
+              "timedOut": null,
+              "duration": 1132,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homeSaucePage.default.typeUsername('locked_out_user');\n_homeSaucePage.default.typePassword('secret_sauce');\n_homeSaucePage.default.clickLogin();\n_homeSaucePage.default.elements.errorMessage().should('have.text', 'Epic sadface: Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "9296870e-383b-4734-803b-2ecb19c8f470",
+              "parentUUID": "69b97ac0-4228-430f-ae76-e639c6e87a50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display incorrect User message",
+              "fullTitle": "POM implementation should display incorrect User message",
+              "timedOut": null,
+              "duration": 913,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homeSaucePage.default.typeUsername('incorrect_user');\n_homeSaucePage.default.typePassword('secret_sauce');\n_homeSaucePage.default.clickLogin();\n_homeSaucePage.default.elements.errorMessage().should('have.text', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "e1774142-3331-4670-a1cd-798a6e5b2565",
+              "parentUUID": "69b97ac0-4228-430f-ae76-e639c6e87a50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display incorrect User message",
+              "fullTitle": "POM implementation should display incorrect User message",
+              "timedOut": null,
+              "duration": 898,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homeSaucePage.default.typeUsername('standard_user');\n_homeSaucePage.default.typePassword('incorrectpa_ss');\n_homeSaucePage.default.clickLogin();\n_homeSaucePage.default.elements.errorMessage().should('have.text', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "a13a51ee-6b52-4b4d-85d2-615a5f67d20c",
+              "parentUUID": "69b97ac0-4228-430f-ae76-e639c6e87a50",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdf66957-fa7b-4077-b549-736686c11d6d",
+            "9296870e-383b-4734-803b-2ecb19c8f470",
+            "e1774142-3331-4670-a1cd-798a6e5b2565",
+            "a13a51ee-6b52-4b4d-85d2-615a5f67d20c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5411,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
