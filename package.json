@@ -11,7 +11,7 @@
     "cypress:open": "cypress open --browser chrome --e2e",
     "cypress:runDefault": "cypress run --spec cypress/e2e/3-test/retry_ability.cy.js",
     "cypress:runChrome": "cypress run --browser chrome --spec cypress/e2e/POM/*.cy.js",
-    "cypress:runEdge": "cypress run --browser edge --spec cypress/e2e/POM/*.cy.js",
+    "cypress:runEdge": "npx cypress run --browser edge --spec cypress/e2e/POM/*.cy.js",
     "cypress:demo": "cypress run --browser chrome --spec cypress/e2e/POM/*cy.js", 
     "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/e2e/3-test/retry_ability.cy.js",
     "cypress:runRecord": "cypress run --headless --browser chrome --spec cypress/e2e/POM/homeSaucePage.cy.js --record --key 58f36b7a-ca51-4556-96ae-c285ac83a300"
